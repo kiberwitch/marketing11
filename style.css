@@ -1,638 +1,637 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-      body {
-        width: 100%;
-        min-height: 100vh;
-        background-image: url(img/background.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; 
-      }
+/* Хедер */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(117.69, 117.69, 117.69, 0.2) 100%
+  );
+  backdrop-filter: blur(90px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-      /* Хедер */
-      .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 85px;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(117.69, 117.69, 117.69, 0.2) 100%
-        );
-        backdrop-filter: blur(90px);
-        z-index: 1000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+.nav {
+  display: flex;
+  gap: 60px;
+}
 
-      .nav {
-        display: flex;
-        gap: 60px;
-      }
+.nav__link {
+  color: #e0b7b3;
+  font-size: 24px;
+  font-family: Futuris, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-      .nav__link {
-        color: #e0b7b3;
-        font-size: 24px;
-        font-family: Futuris, sans-serif;
-        font-weight: 400;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
+.nav__link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(224, 183, 179, 0.7);
+}
 
-      .nav__link:hover {
-        color: #ffffff;
-        text-shadow: 0 0 5px rgba(224, 183, 179, 0.7);
-      }
+.section-container {
+  width: 1366px;
+  margin: 0 auto;
+  position: relative;
+  padding: 100px 0;
+}
 
-      .section-container {
-        width: 1366px;
-        margin: 0 auto;
-        position: relative;
-        padding: 100px 0;
-      }
+.section-divider {
+  width: 1366px;
+  height: 0;
+  border-bottom: 2px solid #fce6d9;
+  margin: 0 auto;
+}
 
-      .section-divider {
-        width: 1366px;
-        height: 0;
-        border-bottom: 2px solid #fce6d9;
-        margin: 0 auto;
-      }
+.section-title {
+  text-align: center;
+  color: #fce6d9;
+  font-size: 64px;
+  font-family: Futuris;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
 
-      .section-title {
-        text-align: center;
-        color: #fce6d9;
-        font-size: 64px;
-        font-family: Futuris;
-        font-weight: 400;
-        margin-bottom: 40px;
-      }
+.section-subtitle {
+  text-align: center;
+  color: #fce6d9;
+  font-size: 64px;
+  font-family: Futuris;
+  font-weight: 400;
+  margin: 60px 0 40px;
+}
 
-      .section-subtitle {
-        text-align: center;
-        color: #fce6d9;
-        font-size: 64px;
-        font-family: Futuris;
-        font-weight: 400;
-        margin: 60px 0 40px;
-      }
+/* главная секция */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 85px;
+  padding-bottom: 0;
+}
 
-      /* главная секция */
-      .hero {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 85px;
-        padding-bottom: 0;
-      }
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  flex-grow: 1;
+}
 
-      .hero__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-        text-align: center;
-        flex-grow: 1;
-      }
+.hero__title {
+  color: #fce6d9;
+  font-size: 200px;
+  font-weight: 400;
+  margin: 0;
+}
 
-      .hero__title {
-        color: #fce6d9;
-        font-size: 200px;
-        font-weight: 400;
-        margin: 0;
-      }
+.hero__slogan {
+  color: #e0b7b3;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
 
-      .hero__slogan {
-        color: #e0b7b3;
-        font-size: 28px;
-        font-weight: 400;
-        margin: 0;
-      }
+.hero__actions {
+  display: flex;
+  gap: 51px;
+}
 
-      .hero__actions {
-        display: flex;
-        gap: 51px;
-      }
+.btn {
+  width: 130px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
 
-      .btn {
-        width: 130px;
-        height: 44px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-        font-weight: 400;
-        cursor: pointer;
-        border: none;
-        font-family: inherit;
-        transition: all 0.3s ease;
-      }
+.btn--primary {
+  background: #fce6d9;
+  color: #10041b;
+}
 
-      .btn--primary {
-        background: #fce6d9;
-        color: #10041b;
-      }
+.btn--secondary {
+  background: transparent;
+  border: 1px solid #fce6d9;
+  color: #fce6d9;
+}
 
-      .btn--secondary {
-        background: transparent;
-        border: 1px solid #fce6d9;
-        color: #fce6d9;
-      }
+.hero__scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  color: #e0b7b3;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 40px;
+  cursor: pointer; /* Добавлено: курсор указателя */
+  transition: all 0.3s ease; /* Добавлено: плавный переход */
+}
 
-      .hero__scroll {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 30px;
-        color: #e0b7b3;
-        font-size: 24px;
-        font-weight: 400;
-        margin-top: 40px;
-        cursor: pointer; /* Добавлено: курсор указателя */
-        transition: all 0.3s ease; /* Добавлено: плавный переход */
-      }
+.hero__scroll:hover {
+  transform: translateY(5px); /* Добавлено: эффект при наведении */
+  color: #fce6d9; /* Добавлено: изменение цвета при наведении */
+}
 
-      .hero__scroll:hover {
-        transform: translateY(5px); /* Добавлено: эффект при наведении */
-        color: #fce6d9; /* Добавлено: изменение цвета при наведении */
-      }
+.hero__scroll-icon {
+  width: 15px;
+  transition: transform 0.3s ease; /* Добавлено: плавная анимация иконки */
+}
 
-      .hero__scroll-icon {
-        width: 15px;
-        transition: transform 0.3s ease; /* Добавлено: плавная анимация иконки */
-      }
+.hero__scroll:hover .hero__scroll-icon {
+  transform: translateY(5px); /* Добавлено: движение иконки при наведении */
+}
 
-      .hero__scroll:hover .hero__scroll-icon {
-        transform: translateY(5px); /* Добавлено: движение иконки при наведении */
-      }
+/* О нас */
+.about__description {
+  text-align: center;
+  color: #e0b7b3;
+  font-size: 28px;
+  font-family: Futuris;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 auto 60px;
+  max-width: 1314px;
+}
 
-      /* О нас */
-      .about__description {
-        text-align: center;
-        color: #e0b7b3;
-        font-size: 28px;
-        font-family: Futuris;
-        font-weight: 400;
-        line-height: 1.4;
-        margin: 0 auto 60px;
-        max-width: 1314px;
-      }
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
 
-      .advantages {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
-        margin-top: 60px;
-      }
+.advantage-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 386px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
-      .advantage-card {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(5px);
-        border-radius: 25px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 40px 20px;
-        text-align: center;
-        min-height: 386px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
+.advantage-card__title {
+  color: #fce6d9;
+  font-size: 24px;
+  text-align: left;
+  font-weight: 400;
+}
 
-      .advantage-card__title {
-        color: #fce6d9;
-        font-size: 24px;
-      text-align: left;
-        font-weight: 400;
-      }
+.advantage-card__text {
+  color: #e0b7b3;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
 
-      .advantage-card__text {
-        color: #e0b7b3;
-        font-size: 16px;
-        text-align: left;
-        font-weight: 400;
-        line-height: 1.4;
-        margin: 0;
-      }
+/* Пакеты */
+.packages__guarantee {
+  text-align: center;
+  color: #e0b7b3;
+  font-size: 16px;
+  font-family: Futuris;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 0 auto 60px;
+  max-width: 1070px;
+}
 
-      /* Пакеты */
-      .packages__guarantee {
-        text-align: center;
-        color: #e0b7b3;
-        font-size: 16px;
-        font-family: Futuris;
-        font-weight: 400;
-        line-height: 40px;
-        margin: 0 auto 60px;
-        max-width: 1070px;
-      }
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
 
-      .packages-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-        margin-top: 60px;
-      }
+.package-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  text-align: center;
+  min-height: 539px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-      .package-card {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(5px);
-        border-radius: 25px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 40px 30px;
-        text-align: center;
-        min-height: 539px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
+.package-card__name {
+  color: #fce6d9;
+  font-size: 40px;
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
 
-      .package-card__name {
-        color: #fce6d9;
-        font-size: 40px;
-      text-align: left;
-        font-weight: 400;
-        margin-bottom: 5px;
-      }
+.package-card__features {
+  color: #e0b7b3;
+  font-size: 15px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  flex-grow: 1;
+}
 
-      .package-card__features {
-        color: #e0b7b3;
-        font-size: 15px;
-      text-align: left;
-        font-weight: 400;
-        line-height: 40px;
-        list-style: none;
-        padding: 0;
-        margin: 0 0 40px 0;
-        flex-grow: 1;
-      }
+.package-card__features li {
+  margin-bottom: 10px;
+}
 
-      .package-card__features li {
-        margin-bottom: 10px;
-      }
+.package-card__price {
+  color: #fce6d9;
+  font-size: 40px;
+  font-family: Futuris;
+  font-weight: 400;
+  margin: 0;
+}
 
-      .package-card__price {
-        color: #fce6d9;
-        font-size: 40px;
-        font-family: Futuris;
-        font-weight: 400;
-        margin: 0;
-      }
+/* Контакты */
+.contacts {
+  padding: 100px 0;
+}
 
-      /* Контакты */
-      .contacts {
-        padding: 100px 0;
-      }
+.contacts__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-      .contacts__container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+.contacts__background {
+  position: relative;
+}
 
-      .contacts__background {
-        position: relative;
-      }
+.contacts__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-      .contacts__image {
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
+.contacts__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fce6d9;
+}
 
-      .contacts__content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #fce6d9;
-      }
+.contacts__title {
+  font-size: 64px;
+  font-family: Futuris;
+  font-weight: 400;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
 
-      .contacts__title {
-        font-size: 64px;
-        font-family: Futuris;
-        font-weight: 400;
-        margin-bottom: 20px;
-        white-space: nowrap;
-      }
+.contacts__subtitle {
+  font-size: 20px;
+  font-family: Futuris;
+  font-weight: 400;
+  color: #e0b7b3;
+  margin-bottom: 30px;
+}
 
-      .contacts__subtitle {
-        font-size: 20px;
-        font-family: Futuris;
-        font-weight: 400;
-        color: #e0b7b3;
-        margin-bottom: 30px;
-      }
+.contacts__discord {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #fce6d9;
+  border-radius: 10px;
+}
 
-      .contacts__discord {
-        display: inline-block;
-        padding: 12px 24px;
-        border: 1px solid #fce6d9;
-        border-radius: 10px;
-      }
+.discord__handle {
+  font-size: 16px;
+  font-family: Futuris;
+  font-weight: 400;
+  color: #fce6d9;
+}
 
-      .discord__handle {
-        font-size: 16px;
-        font-family: Futuris;
-        font-weight: 400;
-        color: #fce6d9;
-      }
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
 
-      .scroll-animate {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
-      }
+.scroll-animate.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-      .scroll-animate.animated {
-        opacity: 1;
-        transform: translateY(0);
-      }
+.advantage-card.scroll-animate:nth-child(1) {
+  transition-delay: 0.1s;
+}
 
-      .advantage-card.scroll-animate:nth-child(1) {
-        transition-delay: 0.1s;
-      }
+.advantage-card.scroll-animate:nth-child(2) {
+  transition-delay: 0.2s;
+}
 
-      .advantage-card.scroll-animate:nth-child(2) {
-        transition-delay: 0.2s;
-      }
+.advantage-card.scroll-animate:nth-child(3) {
+  transition-delay: 0.3s;
+}
 
-      .advantage-card.scroll-animate:nth-child(3) {
-        transition-delay: 0.3s;
-      }
+.advantage-card.scroll-animate:nth-child(4) {
+  transition-delay: 0.4s;
+}
 
-      .advantage-card.scroll-animate:nth-child(4) {
-        transition-delay: 0.4s;
-      }
+.package-card.scroll-animate:nth-child(1) {
+  transition-delay: 0.1s;
+}
 
-      .package-card.scroll-animate:nth-child(1) {
-        transition-delay: 0.1s;
-      }
+.package-card.scroll-animate:nth-child(2) {
+  transition-delay: 0.2s;
+}
 
-      .package-card.scroll-animate:nth-child(2) {
-        transition-delay: 0.2s;
-      }
+.package-card.scroll-animate:nth-child(3) {
+  transition-delay: 0.3s;
+}
 
-      .package-card.scroll-animate:nth-child(3) {
-        transition-delay: 0.3s;
-      }
+html {
+  scroll-behavior: smooth;
+}
 
-      html {
-        scroll-behavior: smooth;
-      }
+.nav__link {
+  position: relative;
+  transition: all 0.3s ease;
+}
 
-      .nav__link {
-        position: relative;
-        transition: all 0.3s ease;
-      }
+.nav__link:hover {
+  transform: translateY(-2px);
+}
 
-      .nav__link:hover {
-        transform: translateY(-2px);
-      }
+.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fce6d9;
+  transition: width 0.3s ease;
+}
 
-      .nav__link::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: #fce6d9;
-        transition: width 0.3s ease;
-      }
+.nav__link:hover::after {
+  width: 100%;
+}
 
-      .nav__link:hover::after {
-        width: 100%;
-      }
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(252, 230, 217, 0.3);
+}
 
-      .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(252, 230, 217, 0.3);
-      }
+.btn--primary:hover {
+  background: #f8d4c1;
+}
 
-      .btn--primary:hover {
-        background: #f8d4c1;
-      }
+.btn--secondary:hover {
+  background: rgba(252, 230, 217, 0.1);
+}
 
-      .btn--secondary:hover {
-        background: rgba(252, 230, 217, 0.1);
-      }
+.advantage-card,
+.package-card {
+  transition: all 0.3s ease;
+}
 
-      .advantage-card,
-      .package-card {
-        transition: all 0.3s ease;
-      }
+.advantage-card:hover,
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(252, 230, 217, 0.2);
+  border-color: rgba(252, 230, 217, 0.3);
+}
 
-      .advantage-card:hover,
-      .package-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(252, 230, 217, 0.2);
-        border-color: rgba(252, 230, 217, 0.3);
-      }
+@media (max-width: 1366px) {
+  .section-container {
+    width: 90%;
+    max-width: 1366px;
+  }
 
-      @media (max-width: 1366px) {
-        .section-container {
-          width: 90%;
-          max-width: 1366px;
-        }
-        
-        .section-divider {
-          width: 90%;
-        }
-      }
-      
-      @media (max-width: 1024px) {
-        .hero__title {
-          font-size: 150px;
-        }
-        
-        .section-title,
-        .section-subtitle {
-          font-size: 48px;
-        }
-        
-        .advantages {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        
-        .packages-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      
-      @media (max-width: 768px) {
-        .header {
-          height: 70px;
-        }
-        
-        .nav {
-          gap: 30px;
-        }
-        
-        .nav__link {
-          font-size: 18px;
-        }
-        
-        .hero {
-          padding-top: 85px;
-        }
-        
-        .hero__title {
-          font-size: 100px;
-        }
-        
-        .hero__slogan {
-          font-size: 22px;
-        }
-        
-        .section-title,
-        .section-subtitle {
-          font-size: 36px;
-        }
-        
-        .about__description {
-          font-size: 22px;
-        }
-        
-        .advantages {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-        
-        .advantage-card {
-          min-height: auto;
-          padding: 30px 15px;
-        }
-        
-        .packages-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-        
-        .package-card {
-          min-height: auto;
-          padding: 30px 20px;
-        }
-        
-        .contacts__title {
-          font-size: 36px;
-          white-space: normal;
-        }
-        
-        .contacts__container {
-          padding: 0 20px;
-        }
-      }
-      
-      @media (max-width: 480px) {
-        .header {
-          height: 60px;
-        }
-        
-        .nav {
-          gap: 15px;
-        }
-        
-        .nav__link {
-          font-size: 16px;
-        }
-        
-        .hero {
-          padding-top: 60px;
-        }
-        
-        .hero__title {
-          font-size: 70px;
-        }
-        
-        .hero__slogan {
-          font-size: 18px;
-        }
-        
-        .hero__actions {
-          flex-direction: column;
-          gap: 15px;
-        }
-        
-        .btn {
-          width: 180px;
-        }
-        
-        .section-title,
-        .section-subtitle {
-          font-size: 28px;
-        }
-        
-        .about__description {
-          font-size: 18px;
-        }
-        
-        .advantage-card__title {
-          font-size: 20px;
-        }
-        
-        .package-card__name {
-          font-size: 32px;
-        }
-        
-        .package-card__price {
-          font-size: 32px;
-        }
-        
-        .contacts {
-          padding: 60px 0;
-        }
-        
-        .contacts__container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 0 15px;
-        }
-        
-        .contacts__background {
-          display: none; 
-        }
-        
-        .contacts__content {
-          position: static;
-          transform: none;
-          width: 100%;
-          max-width: 400px;
-          text-align: center;
-          padding: 40px 20px;
-          background: rgba(255, 255, 255, 0.05);
-          backdrop-filter: blur(5px);
-          border-radius: 25px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .contacts__title {
-          font-size: 28px;
-          margin-bottom: 15px;
-          line-height: 1.3;
-        }
-        
-        .contacts__subtitle {
-          font-size: 18px;
-          margin-bottom: 25px;
-        }
-        
-        .discord__handle {
-          font-size: 14px;
-        }
-      }
+  .section-divider {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero__title {
+    font-size: 150px;
+  }
+
+  .section-title,
+  .section-subtitle {
+    font-size: 48px;
+  }
+
+  .advantages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+
+  .nav {
+    gap: 30px;
+  }
+
+  .nav__link {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding-top: 85px;
+  }
+
+  .hero__title {
+    font-size: 100px;
+  }
+
+  .hero__slogan {
+    font-size: 22px;
+  }
+
+  .section-title,
+  .section-subtitle {
+    font-size: 36px;
+  }
+
+  .about__description {
+    font-size: 22px;
+  }
+
+  .advantages {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .advantage-card {
+    min-height: auto;
+    padding: 30px 15px;
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .package-card {
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .contacts__title {
+    font-size: 36px;
+    white-space: normal;
+  }
+
+  .contacts__container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 60px;
+  }
+
+  .nav {
+    gap: 15px;
+  }
+
+  .nav__link {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .hero__title {
+    font-size: 70px;
+  }
+
+  .hero__slogan {
+    font-size: 18px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 180px;
+  }
+
+  .section-title,
+  .section-subtitle {
+    font-size: 28px;
+  }
+
+  .about__description {
+    font-size: 18px;
+  }
+
+  .advantage-card__title {
+    font-size: 20px;
+  }
+
+  .package-card__name {
+    font-size: 32px;
+  }
+
+  .package-card__price {
+    font-size: 32px;
+  }
+
+  .contacts {
+    padding: 60px 0;
+  }
+
+  .contacts__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .contacts__background {
+    display: none;
+  }
+
+  .contacts__content {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .contacts__title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+
+  .contacts__subtitle {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .discord__handle {
+    font-size: 14px;
+  }
+}
