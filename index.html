@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Company - Маркетинг для игр</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="reset.css">
   </head>
   <body>
     <header class="header">
@@ -38,12 +38,14 @@
               Подробнее
             </button>
           </div>
-          <div class="hero__scroll">
+          <div class="hero__scroll" onclick="scrollToNextSection()">
             <span class="hero__scroll-text">Листай вниз</span>
             <img src="img/triangle.svg" alt="" class="hero__scroll-icon" />
+             
           </div>
+            <div class="section-divider"></div>
         </div>
-        <div class="section-divider"></div>
+     
       </section>
 
       <section id="about" class="about">
@@ -171,6 +173,19 @@
         const element = document.getElementById(sectionId);
         if (element) {
           element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
+
+      // Новая функция для прокрутки к следующей секции
+      function scrollToNextSection() {
+        const currentSection = document.querySelector('.hero');
+        const nextSection = document.querySelector('#about');
+        
+        if (currentSection && nextSection) {
+          nextSection.scrollIntoView({
             behavior: "smooth",
             block: "start",
           });
